@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816190542) do
+ActiveRecord::Schema.define(:version => 20110818104620) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(:version => 20110816190542) do
     t.date     "start_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price",       :precision => 4, :scale => 2
   end
 
+  add_index "courses", ["price"], :name => "index_courses_on_price"
   add_index "courses", ["start_date"], :name => "index_courses_on_start_date"
 
 end

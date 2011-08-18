@@ -29,7 +29,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-  gem 'RedCloth', :require => 'redcloth'
+#  gem 'RedCloth', :require => 'redcloth'
 end
 
 group :test do
