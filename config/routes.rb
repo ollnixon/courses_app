@@ -1,6 +1,10 @@
 CoursesApp::Application.routes.draw do
   resources :courses
 
+  match 'login' => 'sessions#new', :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
+  resource :session
+
   root :to => 'courses#index'
 
   # The priority is based upon order of creation:

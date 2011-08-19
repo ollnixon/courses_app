@@ -15,8 +15,13 @@
   	<nav>
       <ul>
         <!--<li><%= link_to 'Courses', :controller => 'courses' %></li>-->
-        <li><%= link_to 'Home', '/' %></li>
+        <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Courses', courses_path %></li>
+        <% if @current_user %>
+        <li><%= @current_user.name %> <%= link_to 'Log out', logout_path, :method => :delete %></li>
+        <% else %>
+        <li><%= link_to 'Log in', login_path %></li>
+        <% end %>
       </ul>
   		<!-- <p><%= distance_of_time_in_words_to_now '2011-07-19' %></p> -->
   	</nav>

@@ -7,6 +7,7 @@ gem 'rails', '3.1.0.rc5'
 
 gem 'sqlite3'
 gem 'validates_as_email_address'
+gem 'dynamic_form'
 
 # Gems used only for assets and not required
 # in production environments by default.

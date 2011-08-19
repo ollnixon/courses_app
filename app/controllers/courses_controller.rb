@@ -1,4 +1,7 @@
 class CoursesController < ApplicationController
+  before_filter :load_course, :only => [:edit, :create, :update]
+  before_filter :session_required, :except => [:index, :show]
+
   def index
     @courses = Course.all
   end
@@ -38,4 +41,9 @@ class CoursesController < ApplicationController
     Course.destroy(params[:id])
     redirect_to :index, :notice => "Course deleted"
   end
+
+  private
+    def load_course
+      @course = Course.load(params[:id])
+    end
 end

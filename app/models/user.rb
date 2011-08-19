@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :bookings
   has_many :courses, :through => :bookings
+  has_secure_password
 
   validates :name, :presence => true, :length => { :minimum => 3 }
   validates :email, :presence => true, :uniqueness => true

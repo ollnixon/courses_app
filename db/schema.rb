@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110818142706) do
+ActiveRecord::Schema.define(:version => 20110819140952) do
 
   create_table "bookings", :force => true do |t|
     t.integer  "course_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20110818142706) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
