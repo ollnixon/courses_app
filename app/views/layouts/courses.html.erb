@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CoursesApp</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+	<header>
+		<h1><%= image_tag 'rails.png' %> Welcome to Our Courses Site!</h1>
+	</header>
+
+  	<nav>
+      <ul>
+        <!--<li><%= link_to 'Courses', :controller => 'courses' %></li>-->
+        <li><%= link_to 'Home', '/' %></li>
+        <li><%= link_to 'Courses', courses_path %></li>
+      </ul>
+  		<!-- <p><%= distance_of_time_in_words_to_now '2011-07-19' %></p> -->
+  	</nav>
+  	<div class="clear"></div>
+    <h2>Courses</h2>
+    <%= yield %>
+  </div>
+</body>
+</html>

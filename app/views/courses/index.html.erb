@@ -1,10 +1,11 @@
 <h2>Courses</h2>
 
 <ul id="courses">
-  <%= render @courses %>
-  <%# Equivalent to... %>
-  <%# @courses.each do |course| %>
-    <%#= render "course", {:course => course} %>
-  <%# end %>
-  
+	<p><%= link_to "new", new_course_path() %></p>
+	<%= render @courses %>
+	<%# Equivalent to... %>
+	<%# @courses.each do |course| %>
+		<%#= render "course", {:course => course} %>
+	<%# end %>
+
 </ul>
