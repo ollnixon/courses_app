@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>CoursesApp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div id="container">
-    <header>
-      <h1>Welcome to Our Courses Site!</h1>
-    </header>
+<header>
+  <h1>Welcome to Our Courses Site!</h1>
+</header>
 
-    <h2>Courses</h2>
+<h2>Courses</h2>
 
-    <ul id="courses">
-      <li>LIST COURSES HERE!</li>
-    </ul>
-
-  </div>
-</body>
-</html>
+<ul id="courses">
+  <%= render Course.all %>
+  <%# Equivalent to... %>
+  <%# Course.all.each do |course| %>
+    <%#= render "course", {:course => course} %>
+  <%# end %>
+</ul>
