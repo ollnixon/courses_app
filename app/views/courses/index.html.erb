@@ -1,13 +1,10 @@
-<header>
-  <h1>Welcome to Our Courses Site!</h1>
-</header>
-
 <h2>Courses</h2>
 
 <ul id="courses">
-  <%= render Course.all %>
+  <%= render @courses %>
   <%# Equivalent to... %>
-  <%# Course.all.each do |course| %>
+  <%# @courses.each do |course| %>
     <%#= render "course", {:course => course} %>
   <%# end %>
+  
 </ul>

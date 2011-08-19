@@ -1,1 +1,5 @@
-<li><%= "#{course.name} - #{course.start_date.to_s(:long)}" %></li>
+<li>
+	<%= link_to course.name, course_path(course) %>
+	- <%= "#{course.start_date.to_s(:long)} - #{time_until_start course}" %>
+	(<%= link_to 'x', course_path(course), :method => :delete, :confirm => 'really?', :title => 'Delete' %>)
+</li>
